@@ -72,8 +72,15 @@ function enviarFormulario() {
     alertExito.classList.add("alertaExito");
     alertError.classList.remove("alertaError");
      formRegister.reset();
+     setTimeout(() => {
+         alertExito.classList.remove("alertaExito");
+     }, 3000);
      return;
 }
     alertExito.classList.remove("alertaExito");
     alertError.classList.add("alertaError");
+    
+    setTimeout(() => {
+        alertError.classList.remove("alertaError");
+    }, 3000);
 }
